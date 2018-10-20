@@ -18,6 +18,6 @@ registries:
     protocol: github
     uri: github.com/ksonnet/parts/tree/master/incubator
   ks-ccdp:
-    protocol: fs
-    uri: ks-ccdp
+    protocol: github
+    uri: github.com/ulfmansson/ksonnet/import-log/ks-ccdp
 version: 0.0.1
