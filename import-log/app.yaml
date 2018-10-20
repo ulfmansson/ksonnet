@@ -19,4 +19,4 @@ environments:
     k8sVersion: v1.10.0
     path: prod
 kind: ksonnet.io/app
-name: guestbook
+name: import-log
