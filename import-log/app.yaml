@@ -2,6 +2,7 @@ apiVersion: 0.1.0
 environments:
   default:
     destination:
+      namespace: import-log   
       server: https://kubernetes.default.svc
     k8sVersion: v1.10.3
     path: default
