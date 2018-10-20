@@ -4,7 +4,7 @@
     // replicas: 4,
   },
   components: {
-    "proc1": {
+    "guestbook-ui": {
       image: "docker",
       name: "import-log",
       replicas: 2,
