@@ -9,5 +9,6 @@ local image = params.image;
 local replicas = params.replicas;
 
 k.core.v1.list.new([
+  process.parts.process.name_space(params.name),
   process.parts.process.deployment(params.name, params.image, params.replicas)
 ])
