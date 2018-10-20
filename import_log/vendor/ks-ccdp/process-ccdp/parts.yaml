@@ -1,0 +1,23 @@
+name: process-ccdp
+apiVersion: 0.0.1
+kind: ksonnet.io/parts
+description: >
+  A process to be deployed without external interfaces
+author: Ulf Mansson <ulf.mansson@volvocars.com>
+contributors:
+- name: Ulf Mansson
+  email: ulf.mansson@volvocars.com
+repository:
+  type: file
+  url: teams/devops/projects/ks-ccdp/process-ccdp
+keywords:
+- process
+- ccdp
+quickStart:
+  prototype: com.volvocars.ccdp.pkg.process
+  componentName: process
+  flags:
+    name: process
+    namespace: default
+  comment: Deployment of a process
+license: Apache 2.0
