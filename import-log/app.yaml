@@ -2,7 +2,6 @@ apiVersion: 0.1.0
 environments:
   default:
     destination:
-      namespace: import-log
       server: https://ADF61DFAFD974AC9DEEB8CF474A59101.sk1.eu-west-1.eks.amazonaws.com
     k8sVersion: v1.10.3
     path: default
