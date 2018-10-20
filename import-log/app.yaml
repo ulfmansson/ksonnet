@@ -2,21 +2,22 @@ apiVersion: 0.1.0
 environments:
   default:
     destination:
-      namespace: default
+      namespace: import-log
       server: https://kubernetes.default.svc
-    k8sVersion: v1.10.0
+    k8sVersion: v1.10.3
     path: default
-  dev:
-    destination:
-      namespace: dev
-      server: https://kubernetes.default.svc
-    k8sVersion: v1.10.0
-    path: dev
-  prod:
-    destination:
-      namespace: prod
-      server: https://kubernetes.default.svc
-    k8sVersion: v1.10.0
-    path: prod
 kind: ksonnet.io/app
+libraries:
+  ks-ccdp/process-ccdp:
+    name: process-ccdp
+    registry: ks-ccdp
+    version: ""
 name: import-log
+registries:
+  incubator:
+    protocol: github
+    uri: github.com/ksonnet/parts/tree/master/incubator
+  ks-ccdp:
+    protocol: fs
+    uri: ks-ccdp
+version: 0.0.1
