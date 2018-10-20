@@ -1,14 +1,47 @@
 local env = std.extVar("__ksonnet/environments");
-local params = std.extVar("__ksonnet/params").components["proc1"];
-
-local k = import 'k.libsonnet';
-local process = import 'ks-ccdp/process-ccdp/process.libsonnet';
-
-local name = params.name;
-local image = params.image;
-local replicas = params.replicas;
-
-k.core.v1.list.new([
-  process.parts.process.name_space(params.name),
-  process.parts.process.deployment(params.name, params.image, params.replicas)
-])
+local params = std.extVar("__ksonnet/params").components["guestbook-ui"];
+[
+   {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+         "name": params.name
+      },
+      "spec": {
+         "selector": {
+            "app": params.name
+         },
+         "type": params.type
+      }
+   },
+   {
+      "apiVersion": "apps/v1beta2",
+      "kind": "Deployment",
+      "metadata": {
+         "name": params.name
+      },
+      "spec": {
+         "replicas": params.replicas,
+         "selector": {
+            "matchLabels": {
+               "app": params.name
+            },
+         },
+         "template": {
+            "metadata": {
+               "labels": {
+                  "app": params.name
+               }
+            },
+            "spec": {
+               "containers": [
+                  {
+                     "image": params.image,
+                     "name": params.name
+                  }
+               ]
+            }
+         }
+      }
+   }
+]
