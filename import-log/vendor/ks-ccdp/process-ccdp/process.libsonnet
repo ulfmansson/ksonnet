@@ -33,7 +33,7 @@ local volume = deployment.mixin.spec.template.spec.volumesType;
                       }
                     ],
                    "imagePullSecrets": [{
-                      "name": "regcred"
+                      "name": "ccdp-docker-auth"
                    }]
                 }
              }
