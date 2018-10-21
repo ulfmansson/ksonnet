@@ -19,5 +19,5 @@ registries:
     uri: github.com/ksonnet/parts/tree/master/incubator
   ks-ccdp:
     protocol: github
-    uri: github.com/ulfmansson/ksonnet/import-log/ks-ccdp
+    uri: github.com/ulfmansson/ksonnet/tree/master/import-log/ks-ccdp
 version: 0.0.1
