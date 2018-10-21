@@ -6,8 +6,7 @@
   components: {
     "proc1": {
       image: "docker",
-      name: "import-log",
-      replicas: 2,
+      replicas: 1,
     },
   },
 }

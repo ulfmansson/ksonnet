@@ -5,9 +5,8 @@ local k = import 'k.libsonnet';
 local process = import 'ks-ccdp/process-ccdp/process.libsonnet';
 
 local name = params.name;
-local image = params.image;
 local replicas = params.replicas;
 
 k.core.v1.list.new([
-  process.parts.process.deployment(params.name, params.image, params.replicas)
+  process.parts.process.deployment(params.name,  params.replicas)
 ])
