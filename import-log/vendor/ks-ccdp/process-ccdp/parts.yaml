@@ -18,5 +18,6 @@ quickStart:
   componentName: process
   flags:
     name: process
+    namespace: default
   comment: Deployment of a process
 license: Apache 2.0

@@ -6,7 +6,8 @@ local volume = deployment.mixin.spec.template.spec.volumesType;
 {
   parts:: {
     process::{
-        deployment(name, image, replicas)::{
+        deployment(name, replicas)::{
+        local image = 'docker.ccdp.io:5000/' + name,
           "apiVersion": "apps/v1beta2",
           "kind": "Deployment",
           "metadata": {
