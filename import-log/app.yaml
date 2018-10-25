@@ -16,5 +16,5 @@ name: import-log
 registries:
   test:
     protocol: github
-    uri: github.com/ulfmansson/ksonnet/tree/master/import-log/ks-ccdp
+    uri: github.com/volvo-cars/ccdp-devops/tree/master/ks-ccdp
 version: 0.0.1
