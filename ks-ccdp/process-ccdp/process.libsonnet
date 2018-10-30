@@ -41,7 +41,7 @@ local env(env_list, env_secret_list) =
   parts:: {
     process::{
         deployment(name, version, replicas, env_list, env_secret_list)::{
-        local image = 'docker.ccdp.io:5000/' + name + ':' + version,
+        local image = 'docker.ccdp.io/' + name + ':' + version,
           "apiVersion": "apps/v1beta2",
           "kind": "Deployment",
           "metadata": {
