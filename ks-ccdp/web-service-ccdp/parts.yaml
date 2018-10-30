@@ -1,0 +1,25 @@
+name: web-service-ccdp
+apiVersion: 0.0.1
+kind: ksonnet.io/parts
+description: >
+  A web service to be deployed with external interfaces
+author: Ulf Mansson <ulf.mansson@volvocars.com>
+contributors:
+- name: Ulf Mansson
+  email: ulf.mansson@volvocars.com
+repository:
+  type: file
+  url: teams/devops/projects/ks-ccdp/process-ccdp
+keywords:
+- service
+- web-service
+- ccdp
+
+quickStart:
+  prototype: com.volvocars.ccdp.pkg.web-service-ccdp
+  componentName: web-service-ccdp
+  flags:
+    name: web-service
+    namespace: default
+  comment: Deployment of a web-service with a port
+license: Apache 2.0

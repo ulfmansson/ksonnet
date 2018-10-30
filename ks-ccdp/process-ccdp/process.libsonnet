@@ -40,7 +40,7 @@ local env(env_list, env_secret_list) =
 {
   parts:: {
     process::{
-        deployment(name, version, replicas, env_list, env_secret_list)::{
+        deployment(name, version, replicas, env_list, env_secret_list, port)::{
         local image = 'docker.ccdp.io/' + name + ':' + version,
           "apiVersion": "apps/v1beta2",
           "kind": "Deployment",
@@ -66,8 +66,9 @@ local env(env_list, env_secret_list) =
                          "image": image,
 
                          "name": name
-                      }
+                      }	
                       + if std.length(env_list) > 0 then {env:env(env_list,env_secret_list)} else {}
+                      + if port != "" then {ports: [{containerPort: port}]} else {}
                     ],
                    "imagePullSecrets": [{
                       "name": "ccdp-docker-auth"
