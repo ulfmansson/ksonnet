@@ -3,7 +3,7 @@
 // @description Create a standard process without ports
 // @shortDescription Create a standard process without ports
 // @param name string Name to give to each of the components
-// @optionalParam version string "" Version of application to deploy
+// @optionalParam version string   Version of application to deploy
 // @optionalParam replicas number 2 Number of replicas that should run, default is 2
 // @optionalParam env_list object {} Environment variable list
 // @optionalParam env_secret_list object {} Environment variable list for secrets stored in k8s
