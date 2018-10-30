@@ -12,7 +12,7 @@ local k = import 'k.libsonnet';
 local process = import 'ks-ccdp/process-ccdp/process.libsonnet';
 
 local name = import 'param://name';
-local version = imnport 'param://version';
+local version = import 'param://version';
 local replicas = import 'param://replicas';
 local env_list = import 'param://env_list';
 local env_secret_list = import 'param://env_secret_list';
